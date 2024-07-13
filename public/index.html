@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RK Foundation Payment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>RK Foundation</h1>
+            <p>Support our cause by making a donation</p>
+        </header>
+        <form id="payment-form" class="form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="contact">Mobile Number:</label>
+                <input type="tel" id="contact" name="contact" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+            </div>
+            <div id="amount-details"></div>
+            <button type="submit" class="btn">Pay with Razorpay</button>
+        </form>
+        <div id="thank-you" style="display:none;">
+            <h2>Thank you for your donation!</h2>
+            <p>Your support helps us continue our mission.</p>
+        </div>
+        <div id="receipt-container" style="display:none;">
+            <div id="receipt-content"></div>
+            <button id="print-receipt" class="btn">Print Receipt</button>
+        </div>
+    </div>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
