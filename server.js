@@ -1,6 +1,7 @@
 const express = require('express');
 const Razorpay = require('razorpay');
 const bodyParser = require('body-parser');
+const port = process.env.PORT || 8080;
 
 const app = express();
 app.use(bodyParser.json());
@@ -36,6 +37,6 @@ app.get('/amount-details/:paymentId', async (req, res) => {
     }
 });
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
+app.listen(port, () => {
+    console.log('Server is running on port 8080');
 });
